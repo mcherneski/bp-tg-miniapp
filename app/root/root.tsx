@@ -1,6 +1,6 @@
 'use client'
 
-import { type PropsWithChildren, useEffect, useMemo, useState } from "react"
+import { type PropsWithChildren, useEffect } from "react"
 import {
     SDKProvider,
     useLaunchParams,
@@ -13,8 +13,8 @@ import {
 } from '@tma.js/sdk-react'
 import { useDidMount } from "../hooks/useDidMount"
 import { AppRoot } from '@telegram-apps/telegram-ui'
-import { ErrorBoundary } from '@/app/components/ErrorBoundary'
-import { ErrorPage } from '@/app/components/ErrorPage'
+import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { ErrorPage } from '@/components/ErrorPage'
 import { useTelegramMock } from "../hooks/useTelegramMock"
 
 function App(props: PropsWithChildren) {
@@ -47,10 +47,10 @@ function App(props: PropsWithChildren) {
 
 function RootInner({ children }: PropsWithChildren) {
     // Mock Telegram environment in development mode if needed.
-    if (process.env.NODE_ENV === 'development') {
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        useTelegramMock();
-    }
+    // if (process.env.NODE_ENV === 'development') {
+    //     // eslint-disable-next-line react-hooks/rules-of-hooks
+    //     useTelegramMock();
+    // }
 
     return (
         <SDKProvider debug>
