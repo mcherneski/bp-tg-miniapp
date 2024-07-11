@@ -10,12 +10,14 @@ import {
     bindMiniAppCSSVars,
     bindThemeParamsCSSVars,
     bindViewportCSSVars,
-} from '@tma.js/sdk-react'
+} from '@telegram-apps/sdk-react'
 import { useDidMount } from "../hooks/useDidMount"
 import { AppRoot } from '@telegram-apps/telegram-ui'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
 import { ErrorPage } from '@/components/ErrorPage'
 import { useTelegramMock } from "../hooks/useTelegramMock"
+// import {}
+
 
 function App(props: PropsWithChildren) {
     const lp = useLaunchParams()
